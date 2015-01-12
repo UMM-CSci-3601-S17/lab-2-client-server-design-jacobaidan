@@ -5,14 +5,29 @@
 var express = require('express');
 var app = express();
 
+
+var options = {
+    root: __dirname + '/public',
+    dotfiles: 'deny'
+};
+
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', function(req, res){
-    res.send('lelelelelelelle');
+app.get('/kittens', function(req, res){
+    res.send("Page under construction!");
+    //res.sendfile('public/kittens.html');
 });
 
-app.get('/kittens', function(req, res){
-    res.sendfile('public/index.html');
+app.get('/about', function(req, res){
+    res.sendFile('about.html', options);
+});
+
+app.get('/', function(req, res){
+    res.sendFile('home.html', options);
+});
+
+app.get('*', function(req, res){
+    res.send("404");
 });
 
 var server = app.listen(9000, function(){
