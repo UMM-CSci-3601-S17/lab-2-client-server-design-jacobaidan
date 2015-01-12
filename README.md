@@ -7,3 +7,13 @@ Run:
 ```
 npm install
 ```
+
+#Misc:
+Run
+```
+node app.js
+``` 
+in the project directory to serve the project. It should be available on localhost:9000 by default.
+
+>If you get an error something along the lines of ``command 'node' not found`` try running ``nodejs app.js``
+instead. If neither of these work, you likely don't have node installed.
