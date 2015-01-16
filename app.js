@@ -17,11 +17,11 @@ app.use(express.static(__dirname + '/public'));
 // When your browser wants a page from a site, it will generally send an HTTP "get" request for it. (literally, asking the web server for the specific page or file).
 // For instance, say your website is 'www.pets.net' and someone types 'www.pets.net/kittens' into their browser.
 // To our server, this will look like a request for '/kittens', and we need to define how we want it to respond.
-// What we are doing here is telling our nodejs / express server what to send back to the browser when it requests certain things.
+// What we are doing here is telling our nodejs / Express server what to send back to the browser when it requests certain things.
 
 // Breaking it down:   app.get('/kittens', function(req, res){res.send("kittens!");});
 // app -- the name of our Express instance created on line 4
-// app.get('/kittens', etc...) -- sending a 'get' request to our Express instance (app), the request is '/kittens'
+// app.get('/kittens', etc...) -- defining behavior for a 'get' request to our Express instance (app), the request is '/kittens'
 // app.get('/kittens', function(req, res){ etc... }) -- defining a function to handle the request for '/kittens' (req = request, res = response)
 // app.get('/kittens', function(req, res){ res.send('kittens!"); }); -- responding to the request by sending the string "kittens!" to the browser.
 
