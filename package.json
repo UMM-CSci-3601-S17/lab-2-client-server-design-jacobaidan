@@ -9,7 +9,9 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
+    "body-parser": "^1.10.1",
     "express": "~4.10.7",
+    "json": "^9.0.3",
     "nodejs": "0.0.0"
   }
 }

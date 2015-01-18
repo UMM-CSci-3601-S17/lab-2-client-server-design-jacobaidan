@@ -2,6 +2,9 @@
 // require Express (used for routing and stuff)
 var express = require('express');
 var app = express();
+var bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({extended: false}));
 
 // define options that Express will use when sending files to the client (using res.sendFile)
 var options = {
@@ -32,6 +35,16 @@ app.get('/kittens', function(req, res){
 
 app.get('/about', function(req, res){
     res.sendFile('about.html', options);
+});
+
+app.get('/petForm', function(req, res){
+    res.sendFile('petForm.html', options);
+    //console.log(req.query["newPet"]);
+});
+
+app.post('/petForm', function(req, res){
+    res.send(req.body.newPet);
+    console.log(req.body.newPet);
 });
 
 app.get('/', function(req, res){

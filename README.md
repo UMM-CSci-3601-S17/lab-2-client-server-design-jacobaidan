@@ -17,3 +17,9 @@ in the project directory to serve the project. It should be available on localho
 
 >If you get an error something along the lines of ``command 'node' not found`` try running ``nodejs app.js``
 instead. If neither of these work, you likely don't have node installed.
+
+
+##resoures 
+http://codeforgeek.com/2014/09/handle-get-post-request-express-4/
+
+https://groups.google.com/forum/#!topic/express-js/iP2VyhkypHo
