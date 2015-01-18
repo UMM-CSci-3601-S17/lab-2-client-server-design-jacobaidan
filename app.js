@@ -6,6 +6,9 @@ var bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({extended: false}));
 
+//require our own javascript
+var tools = require('./serverJavascript.js');
+
 // define options that Express will use when sending files to the client (using res.sendFile)
 var options = {
     root: __dirname + '/public',
@@ -43,7 +46,7 @@ app.get('/petForm', function(req, res){
 });
 
 app.post('/petForm', function(req, res){
-    res.send(req.body.newPet);
+    res.send(req.body.newPet + " String Length: " + tools.stringLength(req.body.newPet));
     console.log(req.body.newPet);
 });
 
@@ -64,3 +67,7 @@ var server = app.listen(9000, function(){
 
    console.log("server listening on http://%s:%s", host, port);
 });
+
+
+
+
