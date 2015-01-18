@@ -4,6 +4,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require("body-parser");
 
+// Including body-parser. See readme for info.
 app.use(bodyParser.urlencoded({extended: false}));
 
 //require our own javascript
