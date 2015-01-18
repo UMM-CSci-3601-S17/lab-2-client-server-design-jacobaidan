@@ -8,7 +8,7 @@ Run:
 npm install
 ```
 
-#Misc:
+#Running Your Project:
 Run
 ```
 node app.js
@@ -19,7 +19,9 @@ in the project directory to serve the project. It should be available on localho
 instead. If neither of these work, you likely don't have node installed.
 
 
-##resoures 
+##Resoures
+#####Handling POST requests in Express:
 http://codeforgeek.com/2014/09/handle-get-post-request-express-4/
 
+#####Security concerns for handling POST requests in Express:
 https://groups.google.com/forum/#!topic/express-js/iP2VyhkypHo
