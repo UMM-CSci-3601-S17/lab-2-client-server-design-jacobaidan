@@ -23,3 +23,5 @@ instead. If neither of these work, you likely don't have node installed.
 http://codeforgeek.com/2014/09/handle-get-post-request-express-4/
 
 https://groups.google.com/forum/#!topic/express-js/iP2VyhkypHo
+
+http://jasmine.github.io/2.0/introduction.html
