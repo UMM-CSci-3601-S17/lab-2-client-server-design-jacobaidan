@@ -10,11 +10,12 @@ var sendAlert = function(){
 
 /**
  * Used for getting the length of a string. For example only, you won't likely need to use something like this...
+ * DIFFERENT FROM THE stringLength function in the server side javascript!!!
  *
  * @param str  - the string to have its length returned
  * @returns {*}  - an integer, the length of the string
  */
-var stringLength = function(str){
+var testStringLength = function(str){
     return str.length;
 };
 
