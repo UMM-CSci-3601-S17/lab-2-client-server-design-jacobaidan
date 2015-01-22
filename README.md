@@ -27,7 +27,7 @@ To run your tests, run:
 ```
 karma start karma.conf.js
 ```
-> If you get a message along the lines of ``command 'karma' not found`` you probably don't have karma installed
+> If you get a message along the lines of ``bash: karma: command not found`` you probably don't have karma installed
 correctly. You'll have to run: ``node_modules/karma/bin/karma start karma.conf.js`` instead.
 
 ##Resoures
