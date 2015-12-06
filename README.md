@@ -1,6 +1,5 @@
 # CSCI 3601 Lab #2 - Javascript and Node Lab
 #### Spring 2016
-Playing with node and express a bit. This setup might be used to teach students about nodejs and routing.
 
 
 #Setup:
@@ -8,13 +7,14 @@ Run:
 ```
 npm install
 ```
+> Protip: npm stands for "Node Package Manager"
 
 #Running Your Project:
 Run
 ```
 node app.js
 ``` 
-in the project directory to serve the project. It should be available on localhost:9000 by default.
+in the project directory to start the node server and serve the project. It should be available on localhost:9000 by default.
 
 >If you get an error something along the lines of ``command 'node' not found`` try running ``nodejs app.js``
 instead. If neither of these work, you likely don't have node installed.
