@@ -1,6 +1,4 @@
 # CSCI 3601 Lab #2 - Javascript and Node Lab
-#### Spring 2016
-
 
 #Setup:
 Run:
