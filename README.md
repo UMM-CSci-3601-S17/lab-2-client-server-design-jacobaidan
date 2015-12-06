@@ -1,4 +1,5 @@
-# nodeLabExample
+# CSCI 3601 Lab #2 - Javascript and Node Lab
+#### Spring 2016
 Playing with node and express a bit. This setup might be used to teach students about nodejs and routing.
 
 
