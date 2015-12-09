@@ -33,7 +33,7 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 - Study jasmine testing syntax. Think of a Javascript function, describe its behavior by writing tests for it (this is test-driven development, or TDD). Add the function, run the tests. (Actually do this. Don't forget to commit your changes!)
 
-## Part #3: adding GPA calculator
+## Part #3: adding a GPA calculator
 
 - Add a page to the project (don't forget to add it to git) that has a form for letter grades and credits for three classes.
 
