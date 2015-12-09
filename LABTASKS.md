@@ -31,7 +31,7 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 ######Find the testing file, describe where it is located and what it is testing. Run karma (the testing engine) as specified in the Readme and desrcibe results.
 
-######Study jasmine testing syntax. Think of a Javascript function, describe its behavior by writing tests for it (this is test-driven development, or TDD). Add the function, run the tests. (Actually do this. Don't forget to commit your changes!)
+- Study jasmine testing syntax. Think of a Javascript function, describe its behavior by writing tests for it (this is test-driven development, or TDD). Add the function, run the tests. (Actually do this. Don't forget to commit your changes!)
 
 ## Task #3: adding GPA calculator.
 
