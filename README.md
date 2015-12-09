@@ -1,5 +1,10 @@
 # CSCI 3601 Lab #2 - Javascript and Node Lab
 
+During this lab, you will explore serving up a simple website that you create, using a Node.js server. Your website will make use of JavaScript to enable you to accept and process user input. You will also be introduced to Karma / Jasmine testing, as well as test code coverage reporting and continuous integration using Travis CI.
+
+
+Your specific tasks for this lab can be found in the [LABTASKS.md](LABTASKS.md) file in this repository.
+
 #Setup:
 Run:
 ```
