@@ -1,7 +1,7 @@
 #Lab Tasks
 
-## Task 1: exploring the node.js project
-Study the project you have cloned. Run it according to the instrucitons in the README, including running the tests. Answer the following questions by editing this file.  
+## Part #1: exploring the node.js project
+Study the project you have cloned. Run it according to the instrucitons in the README, including running the tests. Answer the following questions by editing this file.  This will give you a chance to play with markdown.
 
 #####What is the purpose of app.js? Explain what happens when a user is trying to access a page "kittens", when a user is trying to access the page "petForm", and when the user submits a form on "petForm". Explain what a "route" is.
 
@@ -27,13 +27,13 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 #####What's in .giignore file? What's the purpose of it?
 
-## Task #2: exploring testing.
+## Part #2: exploring testing.
 
 #####Find the testing file, describe where it is located and what it is testing. Run karma (the testing engine) as specified in the Readme and desrcibe results.
 
 - Study jasmine testing syntax. Think of a Javascript function, describe its behavior by writing tests for it (this is test-driven development, or TDD). Add the function, run the tests. (Actually do this. Don't forget to commit your changes!)
 
-## Task #3: adding GPA calculator.
+## Part #3: adding GPA calculator.
 
 - Add a page to the project (don't forget to add it to git) that has a form for letter grades and credits for three classes.
 
