@@ -28,3 +28,20 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 ######What's in .giignore file? What's the purpose of it?
 
 ## Task #2: exploring testing.
+
+######Find the testing file, describe where it is located and what it is testing. Run karma (the testing engine) as specified in the Readme and desrcibe results.
+
+######Study jasmine testing syntax. Think of a Javascript function, describe its behavior by writing tests for it (this is test-driven development, or TDD). Add the function, run the tests. (Actually do this. Don't forget to commit your changes!)
+
+## Task #3: adding GPA calculator.
+
+- Add a page to the project (don't forget to add it to git) that has a form for letter grades and credits for three classes.
+
+- In TDD fashion, add tests for functions needed to compute the GPA and then implement the functions themselves. Note, however, that karma doesn't work with exports, so after you have tested the functions, you would need to create copies of them that you are exporting. This is awkward and will be fixed in subsequent node setups. Also make sure to add the file that you are testing to karma.conf.js.
+
+- Add a route to app.js to display the GPA on the resulting page.
+
+- Add the basic html to the send so that the GPA is displayed as an html page. Don't add too much: later we will be using various libraries to take care of generating html.
+
+- As you are working, don't forget to change drivers in pair-programming, practice TDD, write comments, and make frequent commits. As before, at the end just push all the changes to github.
+
