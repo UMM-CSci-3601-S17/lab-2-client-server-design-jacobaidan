@@ -29,7 +29,7 @@ Study the project you have cloned. Run it according to the instrucitons in the R
 
 #####What is the purpose of package.json file? What's in it, and what does it mean?
 
-#####What's in .giignore file? What's the purpose of it?
+#####What's in .gitgnore file? What's the purpose of it?
 
 ## Part #2: exploring testing
 
