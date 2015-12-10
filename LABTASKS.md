@@ -1,7 +1,7 @@
 #Lab Tasks
 
 For lab tasks from here on out, questions that require exploration and responding to on this markdown page will be in bolded text. You should respond to them directly within this markdown file. Markdown is effectively a plaintext, lighweight markup language that is designed to be converted into HTML; more simply, it's some text and symbols you can put into a document that will turn into pretty HTML.
-Tasks that specify work to do that does not require a response will be bulleted.
+Tasks that specify work to do without a written response will be bulleted.
 If you're ever confused about what you need to do for a given task, ask.
 
 ## Part #1: exploring the node.js project
