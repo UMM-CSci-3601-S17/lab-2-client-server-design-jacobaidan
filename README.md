@@ -49,6 +49,27 @@ you get free private builds on Travis while you're a student.
 Most of the work to set up Travis has already been done for you in this lab, but we recommend that you read up a bit on the process (it's actually quite simple!)
 - Setting up Travis CI With a Node.js / Karma project: http://karma-runner.github.io/0.8/plus/Travis-CI.html
 
+What you need to do:
+- Sign into Travis CI with your GitHub account.
+
+> Protip: We'd receommend having everyone in your group do this.
+
+- Authorize the application to access your GitHub account.
+  - Read through the "First Time Here?" instructions.
+- Click on the "+" on the left side of the page near "My Repositories".
+- Find your fork for this lab in the list of repositories.
+- Enable continuous integration for it by clicking the big toggle switch beside it.
+- Then, click on the gear icon (settings) directly next to the previous toggle switch.
+- From here, you can see various pieces of information and settings regarding the builds of your project.
+- At this point, make some change to your forked project and add those changes to GitHub (It doesn't really matter what you do, this is needed to trigger a Travis build).
+- Click on the Build Status Image button to the right of the name of the repository.
+  - Select "Master" for the Branch.
+  - Select "Markdown" for the drop-down.
+  - Copy the markdown it provides.
+  - Update the README.md file to swap out the build status image at the top with your own.
+
+Your own forked project is now ready for the magic of continuous integration!
+
 ##Resoures
 #####Handling POST requests in Express:
 http://codeforgeek.com/2014/09/handle-get-post-request-express-4/
