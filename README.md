@@ -35,9 +35,19 @@ karma start karma.conf.js
 > If you get a message along the lines of ``bash: karma: command not found`` you probably don't have karma installed
 correctly. You'll have to run: ``node_modules/karma/bin/karma start karma.conf.js`` instead.
 
-#Continuous Integration:
+#Continuous Integration with Travis CI
+Travis CI is a Continuous Integration tool that performs builds of your project every time you push to GitHub. This is very helpful, as it makes
+keeping track of your testing over the lifetime of a project very easy. Having a build/test history makes finding where, or when, your project broke
+less of a nightmare.
 
-Add stuff about Travis-CI...
+With Travis any open-source, public project on GitHub can use Travis CI for free whereas people normally
+need to pay for the ability to use Travis to build private repositories. Through your GitHub Student pack,
+you get free private builds on Travis while you're a student.
+
+> Protip: The GitHub Student pack has a ton of really awesome stuff in it, including $100 of credit to Digital Ocean! https://education.github.com/pack/offers
+
+Most of the work to set up Travis has already been done for you in this lab, but we recommend that you read up a bit on the process (it's actually quite simple!)
+- Setting up Travis CI With a Node.js / Karma project: http://karma-runner.github.io/0.8/plus/Travis-CI.html
 
 ##Resoures
 #####Handling POST requests in Express:
