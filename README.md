@@ -27,7 +27,7 @@ Every time you make changes to your project that you want to see, you will need 
 
 #Testing Your Project:
 
-You will test your project using the Karma and Jasmine. Karma is a test runner, and Jasmine is the framework / "language" that you will be writing your tests in. It is highly recommended that you read the Jasmine testing tutorial linked in the resourses
+You will test your project using Karma and Jasmine. Karma is a test runner, and Jasmine is the framework / "language" that you will be writing your tests in. It is highly recommended that you read the Jasmine testing tutorial linked in the resourses
 section at the bottom of this document.
 
 The ``karma.conf.js`` file should already exist if you cloned the repo correctly.
