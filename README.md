@@ -1,4 +1,5 @@
-# CSCI 3601 Lab #2 - JavaScript and Node Lab
+# CSCI 3601 Lab #2 - JavaScript and Spark Lab
+
 [![Build Status](https://travis-ci.com/joethe/3601-S16-lab2_javascript-node.svg?token=LxxL6VKVhy5gSxgHFAQ4&branch=master)](https://travis-ci.com/joethe/3601-S16-lab2_javascript-node)
 
 During this lab, you will explore serving up a simple website that you create, using a [Spark][spark] server. Spark is a micro framework for creating web applications in Java. You will be using Spark to create the back-end of your website.
@@ -38,7 +39,7 @@ Your server should now be running on port 4567, the default Spark port. Visit it
 
 ### Client-side
 
-The client-side portion of your project will be tested using [Karma][karma] and [Jasmine][jasmine]. Karma is a javascript test runner, and Jasmine is the framework / "language" that you will write tests in. It is highly reccomended that you read the Jasmine testing tutorial linked in the resources section at the bottom of this README.
+The client-side portion of your project will be tested using [Karma][karma] and [Jasmine][jasmine]. Karma is a JavaScript test runner, and Jasmine is the framework / "language" that you will write tests in. It is highly recommend that you read the Jasmine testing tutorial linked in the resources section at the bottom of this README.
 
 Client-sided tests are located in the `src/test/javascript` directory. Naming follows a simple pattern. For a file such as `clientJavascript.js`, the test would be called `clientJavascript.spec.js`. All client-side tests end in `.spec.js`.
 
@@ -68,23 +69,18 @@ To run both tests at the same time, run:
 ```
 
 ## Continuous Integration with Travis CI
-Travis CI is a Continuous Integration tool that performs builds of your project every time you push to GitHub. This is very helpful, as it makes
-keeping track of your testing over the lifetime of a project very easy. Having a build/test history makes finding where, or when, your project broke
-less of a nightmare.
+[Travis CI][travis] is a Continuous Integration tool that performs builds of your project every time you push to GitHub. This is very helpful, as it makes keeping track of your testing over the lifetime of a project very easy. Having a build/test history makes finding where, or when, your project broke less of a nightmare.
 
-With Travis any open-source, public project on GitHub can use Travis CI for free whereas people normally
-need to pay for the ability to use Travis to build private repositories. Through your GitHub Student pack,
-you get free private builds on Travis while you're a student.
+With Travis any open-source, public project on GitHub can use Travis CI for free whereas people normally need to pay for the ability to use Travis to build private repositories. Through your GitHub Student pack, you get free private builds on Travis while you're a student.
 
 > Protip: The GitHub Student pack has a ton of really awesome stuff in it, including $100 of credit to Digital Ocean! https://education.github.com/pack/offers
 
-:question: Are there any good tutorials for setting up Travis with these
-technologies? If so we should consider linking one of them here.
+We've done the hard part of setting up the [.travis.yml][travis-yml] file. You can look at it by clicking the previous link or read about setting up a Java Gradle project with Travis by [clicking here][travis-java].
 
 What you need to do:
 - Sign into Travis CI with your GitHub account.
 
-> Protip: We'd receommend having everyone in your group do this.
+> Protip: We'd recommend having everyone in your group do this.
 
 - Authorize the application to access your GitHub account.
   - Read through the "First Time Here?" instructions.
@@ -102,17 +98,25 @@ What you need to do:
 
 Your own forked project is now ready for the magic of continuous integration!
 
-## Resoures
+## Resources
 ##### Handling requests in Spark:
-> todo: add this information
+- [Using Spark to create APIs in Java][spark-api]
+- [Response handling with Spark][spark-response]
+- [Spark documentation][spark-documentation]
 
-##### Tutorial for testing with jasmine
-http://jasmine.github.io/2.0/introduction.html
+##### Tutorial for testing with Jasmine
+- [Introduction to Jasmine testing][jasmine-introduction]
 
 [gradle]: https://gradle.org/
 [jasmine]: https://jasmine.github.io/
+[jasmine-introduction]: http://jasmine.github.io/2.0/introduction.html
 [karma]: https://karma-runner.github.io/1.0/index.html
 [labtasks]: LABTASKS.md
 [local]: http://localhost:4567/
 [spark]: http://sparkjava.com/
+[spark-api]: http://nordicapis.com/using-spark-to-create-apis-in-java/
+[spark-documentation]: http://sparkjava.com/documentation.html
+[spark-response]: http://sparkjava.com/documentation.html#response
 [travis]: https://travis-ci.org/
+[travis-java]: https://docs.travis-ci.com/user/languages/java/
+[travis-yml]: .travis.yml
