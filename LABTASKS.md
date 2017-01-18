@@ -1,6 +1,11 @@
 #Lab Tasks
 
-Questions that you need to answer (as a group!) are formatted as large, bold headers. Responses to questions should be submitted as specified by your instructor. Tasks that specify work to do without a written response will be bulleted. If you're ever confused about what you need to do for a given task, ask.
+- Questions that you need to answer (as a group!) are formatted as large, bold headers. 
+- Tasks that specify work to do without a written response will be bulleted. 
+
+Responses to questions should be submitted as specified by your instructor. 
+
+If you're ever confused about what you need to do for a given task, ask.
 
 ## Part #1: Exploring the project
 Study the project you have cloned. Run it according to the instrucitons in the README, including running the tests. Answer the following questions.
