@@ -1,38 +1,69 @@
-# CSCI 3601 Lab #2 - JavaScript and Node Lab
+# CSCI 3601 Lab #2 - JavaScript and Spark Lab
+
 [![Build Status](https://travis-ci.com/joethe/3601-S16-lab2_javascript-node.svg?token=LxxL6VKVhy5gSxgHFAQ4&branch=master)](https://travis-ci.com/joethe/3601-S16-lab2_javascript-node)
 
-During this lab, you will explore serving up a simple website that you create, using a [Spark][spark] server. Spark is a micro framework for creating web applications in Java.
+During this lab, you will explore serving up a simple website that you create, using a [Spark][spark] server. Spark is a micro framework for creating web applications in Java. You will be using Spark to create the back-end of your website.
 
-Your website will make use of JavaScript to enable you to accept and process user input. You will also be introduced to Karma / Jasmine testing, as well as test code coverage reporting and continuous integration using Travis CI.
+Your website will make use of JavaScript on the front-end to enable you to accept and process user input. You will also be introduced to Karma / Jasmine testing, as well as test code coverage reporting and continuous integration using [Travis CI][travis].
 
 Your specific tasks for this lab can be found in the [LABTASKS.md][labtasks] file in this repository.
 
-#Setup:
+## Running Your project
 
-> todo: add this information
+We use the [Gradle][gradle] build tool to build and run our web application. Gradle is a powerful task running system that allows us to easily build and test our full web application.
 
-#Running Your Project:
+You will use the included gradle wrapper to run the project. A *gradle wrapper* is a way to run gradle projects without having to install gradle globally.
 
-> todo: add this information
+To start your web server, run:
 
-#Testing Your Project:
-
-The client-side portion of your project will be tested using Karms and Jasmine.
-Karma is a test runner, and Jasmine is the framework / "language" that you will
-write tests in. It is highly reccomended that you read the Jasmine testing
-tutorial linked in the resources section at the bottom of this readme.
-
-The ``karma.conf.js`` file should already exist if you cloned the repo correctly.
-To run your tests, run:
-```
-karma start karma.conf.js
+```bash
+./gradlew run
 ```
 
-> todo: Update this information:
-> If you get a message along the lines of ``bash: karma: command not found`` you probably don't have karma installed
-correctly. You'll have to run: ``node_modules/karma/bin/karma start karma.conf.js`` instead.
+You'll probably be wondering why you're getting yelled at and why there are a bunch of errors -- this is because there are failing tests. In a production application, builds typically fail when there are tests failing.
 
-#Continuous Integration with Travis CI
+Let's start the server for real. We can ignore tests by passing the `-PskipTests` flag:
+
+```bash
+./gradlew run -PskipTests
+```
+
+Your server should now be running on port 4567, the default Spark port. Visit it at [http://localhost:4567][local].
+
+## Testing Your Project
+
+### Client-side
+
+The client-side portion of your project will be tested using [Karma][karma] and [Jasmine][jasmine]. Karma is a javascript test runner, and Jasmine is the framework / "language" that you will write tests in. It is highly reccomended that you read the Jasmine testing tutorial linked in the resources section at the bottom of this README.
+
+Client-sided tests are located in the `src/test/javascript` directory. Naming follows a simple pattern. For a file such as `clientJavascript.js`, the test would be called `clientJavascript.spec.js`. All client-side tests end in `.spec.js`.
+
+To run your client-side tests, run:
+```bash
+./gradlew karmaRun
+```
+
+### Server-side
+
+The server-side portion of this project will be tested using JUnit.
+
+Server-sided tests are located in the `src/test/java` directory. Naming convention for this also follows a simple pattern. For a file such as `Server.java`, the test would be called `ServerSpec.java`.
+
+To run your server-side tests, run:
+
+```bash
+./gradlew test -x karmaRun
+```
+
+### Both
+
+To run both tests at the same time, run:
+
+```bash
+./gradlew test
+```
+
+## Continuous Integration with Travis CI
 Travis CI is a Continuous Integration tool that performs builds of your project every time you push to GitHub. This is very helpful, as it makes
 keeping track of your testing over the lifetime of a project very easy. Having a build/test history makes finding where, or when, your project broke
 less of a nightmare.
@@ -67,12 +98,17 @@ What you need to do:
 
 Your own forked project is now ready for the magic of continuous integration!
 
-##Resoures
-#####Handling requests in Spark:
+## Resoures
+##### Handling requests in Spark:
 > todo: add this information
 
-#####Tutorial for testing with jasmine
+##### Tutorial for testing with jasmine
 http://jasmine.github.io/2.0/introduction.html
 
+[gradle]: https://gradle.org/
+[jasmine]: https://jasmine.github.io/
+[karma]: https://karma-runner.github.io/1.0/index.html
 [labtasks]: LABTASKS.md
+[local]: http://localhost:4567/
 [spark]: http://sparkjava.com/
+[travis]: https://travis-ci.org/
