@@ -1,3 +1,5 @@
+// Originally developed with gradle 3.3, included is a 3.3 gradlew
+
 // Gradle plugins
 plugins {
     id 'com.craigburke.client-dependencies' version '1.3.1'
@@ -14,7 +16,7 @@ apply plugin: 'application'
 //run.dependsOn karmaRun
 
 // The class where our server is located
-mainClassName='App'
+mainClassName='Server'
 
 // Repositories to download stuff from
 repositories {

@@ -1,8 +1,6 @@
-// Trying out SparkJava
-
 import static spark.Spark.*;
 
-public class App {
+public class Server {
     public static void main(String[] args){
         staticFiles.location("/public");
 
