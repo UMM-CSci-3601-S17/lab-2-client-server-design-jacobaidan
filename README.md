@@ -1,5 +1,4 @@
-# CSCI 3601 Lab #2 - JavaScript and Spark Lab
-
+# CSCI 3601 Lab #2 - JavaScript and Node Lab
 [![Build Status](https://travis-ci.com/joethe/3601-S16-lab2_javascript-node.svg?token=LxxL6VKVhy5gSxgHFAQ4&branch=master)](https://travis-ci.com/joethe/3601-S16-lab2_javascript-node)
 
 During this lab, you will explore serving up a simple website that you create, using a [Spark][spark] server. Spark is a micro framework for creating web applications in Java. You will be using Spark to create the back-end of your website.
@@ -7,6 +6,11 @@ During this lab, you will explore serving up a simple website that you create, u
 Your website will make use of JavaScript on the front-end to enable you to accept and process user input. You will also be introduced to Karma / Jasmine testing, as well as test code coverage reporting and continuous integration using [Travis CI][travis].
 
 Your specific tasks for this lab can be found in the [LABTASKS.md][labtasks] file in this repository.
+
+## Setup
+
+1. Clone your repository into a new project in WebStorm.
+2. Run `./gradlew build -x test` to build the project initially and fetch dependencies.
 
 ## Running Your project
 
@@ -74,8 +78,8 @@ you get free private builds on Travis while you're a student.
 
 > Protip: The GitHub Student pack has a ton of really awesome stuff in it, including $100 of credit to Digital Ocean! https://education.github.com/pack/offers
 
-Most of the work to set up Travis has already been done for you in this lab, but we recommend that you read up a bit on the process (it's actually quite simple!)
-- Setting up Travis CI With a Node.js / Karma project: http://karma-runner.github.io/0.8/plus/Travis-CI.html
+:question: Are there any good tutorials for setting up Travis with these
+technologies? If so we should consider linking one of them here.
 
 What you need to do:
 - Sign into Travis CI with your GitHub account.
