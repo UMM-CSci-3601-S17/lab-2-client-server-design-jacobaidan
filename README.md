@@ -1,10 +1,11 @@
 # CSCI 3601 Lab #2 - JavaScript and Node Lab
 [![Build Status](https://travis-ci.com/joethe/3601-S16-lab2_javascript-node.svg?token=LxxL6VKVhy5gSxgHFAQ4&branch=master)](https://travis-ci.com/joethe/3601-S16-lab2_javascript-node)
 
-During this lab, you will explore serving up a simple website that you create, using a Node.js server. Your website will make use of JavaScript to enable you to accept and process user input. You will also be introduced to Karma / Jasmine testing, as well as test code coverage reporting and continuous integration using Travis CI.
+During this lab, you will explore serving up a simple website that you create, using a [Spark][spark] server. Spark is a micro framework for creating web applications in Java.
 
+Your website will make use of JavaScript to enable you to accept and process user input. You will also be introduced to Karma / Jasmine testing, as well as test code coverage reporting and continuous integration using Travis CI.
 
-Your specific tasks for this lab can be found in the [LABTASKS.md](LABTASKS.md) file in this repository.
+Your specific tasks for this lab can be found in the [LABTASKS.md][labtasks] file in this repository.
 
 #Setup:
 
@@ -72,3 +73,6 @@ Your own forked project is now ready for the magic of continuous integration!
 
 #####Tutorial for testing with jasmine
 http://jasmine.github.io/2.0/introduction.html
+
+[labtasks]: LABTASKS.md
+[spark]: http://sparkjava.com/

@@ -1,11 +1,51 @@
-apply plugin: 'java'
-
-apply plugin: 'application'
-mainClassName="App"
-
-repositories {
-             mavenCentral()
+// Gradle plugins
+plugins {
+    id 'com.craigburke.client-dependencies' version '1.3.1'
+    id 'com.craigburke.karma' version '1.4.4'
 }
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+// Make it so tests are run before running the development server
+// Commented out by default as we have failing tests
+
+//run.dependsOn test
+//run.dependsOn karmaRun
+
+// The class where our server is located
+mainClassName='App'
+
+// Repositories to download stuff from
+repositories {
+    mavenCentral()
+}
+
+// External dependencies that our application utilizes
 dependencies {
-             compile "com.sparkjava:spark-core:2.5.4"
+    compile 'com.sparkjava:spark-core:2.5.4'
+    compile 'org.slf4j:slf4j-simple:1.7.6'
+
+}
+
+// Karma configuration for the gradle-karma plugin
+karma {
+    basePath = '../'
+    colors = true
+    profile 'default'
+
+    browsers = ['PhantomJS']
+    frameworks = ['jasmine']
+    reporters = ['progress']
+
+    profile('default')  {
+        libraryBases = ['src/main/resources/public/vendor/']
+        libraryFiles = ['**/*.js']
+
+        sourceBases = ['src/main/resources/public/javascript/']
+        sourceFiles = ['*.js']
+
+        testBases = ['src/main/resources/public/javascript/']
+        testFiles = ['*.spec.js']
+    }
 }
