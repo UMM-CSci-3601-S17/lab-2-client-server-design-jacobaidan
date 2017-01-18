@@ -10,10 +10,12 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 // Make it so tests are run before running the development server
-// Commented out by default as we have failing tests
+// Add flag `-PskipTests` to skip running tests.
 
-//run.dependsOn test
-//run.dependsOn karmaRun
+if(!project.hasProperty('skipTests')) {
+    run.dependsOn karmaRun
+    run.dependsOn test
+}
 
 // The class where our server is located
 mainClassName='Server'
@@ -28,6 +30,7 @@ dependencies {
     compile 'com.sparkjava:spark-core:2.5.4'
     compile 'org.slf4j:slf4j-simple:1.7.6'
 
+    testCompile 'junit:junit:4.12'
 }
 
 // Karma configuration for the gradle-karma plugin
@@ -47,7 +50,7 @@ karma {
         sourceBases = ['src/main/resources/public/javascript/']
         sourceFiles = ['*.js']
 
-        testBases = ['src/main/resources/public/javascript/']
+        testBases = ['src/test/javascript/']
         testFiles = ['*.spec.js']
     }
 }
