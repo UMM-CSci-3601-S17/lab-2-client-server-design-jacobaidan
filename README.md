@@ -1,5 +1,5 @@
 # CSCI 3601 Lab #2 - JavaScript and Node Lab
-[![Build Status](https://travis-ci.com/joethe/3601-S16-lab2_javascript-node.svg?token=LxxL6VKVhy5gSxgHFAQ4&branch=master)](https://travis-ci.com/joethe/3601-S16-lab2_javascript-node)
+> TODO: Replace build status icon
 
 During this lab, you will explore serving up a simple website that you create, using a [Spark][spark] server. Spark is a micro framework for creating web applications in Java.
 
@@ -9,28 +9,23 @@ Your specific tasks for this lab can be found in the [LABTASKS.md][labtasks] fil
 
 #Setup:
 
-> todo: add this information
+1. Clone your repository into a new project in WebStorm.
+2. Run ``gradle build`` to build the project initially and fetch dependencies.
 
 #Running Your Project:
 
-> todo: add this information
+You can run your project by running the command ``gradle run`` in the top of your project directory.
+To access the your project, navigate to the address ``localhost:4567``.
 
 #Testing Your Project:
 
-The client-side portion of your project will be tested using Karms and Jasmine.
+The client-side portion of your project will be tested using Karma and Jasmine.
 Karma is a test runner, and Jasmine is the framework / "language" that you will
 write tests in. It is highly reccomended that you read the Jasmine testing
 tutorial linked in the resources section at the bottom of this readme.
 
-The ``karma.conf.js`` file should already exist if you cloned the repo correctly.
-To run your tests, run:
-```
-karma start karma.conf.js
-```
+Karma is configured in the "karma" section of the ``build.gradle``.
 
-> todo: Update this information:
-> If you get a message along the lines of ``bash: karma: command not found`` you probably don't have karma installed
-correctly. You'll have to run: ``node_modules/karma/bin/karma start karma.conf.js`` instead.
 
 #Continuous Integration with Travis CI
 Travis CI is a Continuous Integration tool that performs builds of your project every time you push to GitHub. This is very helpful, as it makes
@@ -43,8 +38,8 @@ you get free private builds on Travis while you're a student.
 
 > Protip: The GitHub Student pack has a ton of really awesome stuff in it, including $100 of credit to Digital Ocean! https://education.github.com/pack/offers
 
-Most of the work to set up Travis has already been done for you in this lab, but we recommend that you read up a bit on the process (it's actually quite simple!)
-- Setting up Travis CI With a Node.js / Karma project: http://karma-runner.github.io/0.8/plus/Travis-CI.html
+:question: Are there any good tutorials for setting up Travis with these
+technologies? If so we should consider linking one of them here.
 
 What you need to do:
 - Sign into Travis CI with your GitHub account.
