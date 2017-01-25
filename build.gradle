@@ -9,13 +9,6 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'application'
 
-// Make it so tests are run before running the development server
-// Add flag `-PskipTests` to skip running tests.
-if(!project.hasProperty('skipTests')) {
-    run.dependsOn karmaRun
-    run.dependsOn test
-}
-
 // The class where our server is located
 mainClassName='Server'
 
@@ -54,3 +47,10 @@ karma {
         testFiles = ['*.spec.js']
     }
 }
+
+task runWithTests {
+    group = "application"
+}
+
+runWithTests.dependsOn karmaRun
+runWithTests.dependsOn test
