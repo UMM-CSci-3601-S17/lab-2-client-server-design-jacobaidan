@@ -21,8 +21,9 @@ public class UserController {
         return users;
     }
 
-    // Filter users by age
-    public User[] listUsersByAge(int age) {
-        return Arrays.stream(users).filter(x -> x.age == age).toArray(User[]::new);
+    // Get a single user
+    public User getUser(String id) {
+        return Arrays.stream(users).filter(x -> x._id.equals(id)).findFirst().orElse(null);
     }
+    
 }

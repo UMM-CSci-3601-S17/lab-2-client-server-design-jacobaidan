@@ -3,6 +3,7 @@ package umm3601;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import spark.QueryParamsMap;
 import umm3601.user.UserController;
 
 import java.io.IOException;
@@ -34,11 +35,11 @@ public class Server {
             return wrapInJson("users", gson.toJsonTree(userController.listUsers()));
         });
 
-        // Filter users by specific age
-        get("/users/age/:age", (req, res) -> {
+        // See specific user
+        get("/users/:id", (req, res) -> {
             res.type("application/json");
-            int age = Integer.parseInt(req.params("age"));
-            return wrapInJson("users", gson.toJsonTree(userController.listUsersByAge(age)));
+            String id = req.params("id");
+            return gson.toJson(userController.getUser(id));
         });
     }
 
