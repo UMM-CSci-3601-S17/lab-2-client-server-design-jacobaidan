@@ -69,10 +69,6 @@ is it displayed?
 
 :question: Where is the client-side JavaScript defined? Name the file(s) in which it is used.
 
-:question: What is the purpose of build.gradle file? What's in it, and what does it mean?
-
-:question: What's in .gitgnore file? What's the purpose of it?
-
 ## Use ZenHub to support Agile development
 
 We'll be using ZenHub to augment the standard GitHub issues
