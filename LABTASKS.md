@@ -207,3 +207,7 @@ api/todos?owner=Blanche&status=complete&limit=12
 
 which would return the first 12 completed to-dos owned by
 Blanche.
+
+## Extending the client functionality
+
+**This needs to be filled in.**
