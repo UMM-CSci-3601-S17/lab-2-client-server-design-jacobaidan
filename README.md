@@ -16,6 +16,12 @@ Open up IntelliJ and clone your fork of this repository from GitHub. When prompt
 
 Then, select **import project from existing model** and select **Gradle**. Make sure **Use default graddle wrapper** is selected on the next screen, and click **Finish**.
 
+You'll also want a JSON view extension for either Firefox or Chrome installed. This will make JSON in the browser look pretty and actually be readable.
+
+* Firefox: [JSONView][jsonview-firefox]
+* Chrome: [JSONView][jsonview-chrome]
+
+
 ## Running Your project
 
 We use the [Gradle][gradle] build tool to build and run our web application. Gradle is a powerful task running system that allows us to easily build and test our full web application.
@@ -110,6 +116,8 @@ Then, run tasks like:
 [intellij]: https://www.jetbrains.com/idea/
 [jasmine]: https://jasmine.github.io/
 [jasmine-introduction]: http://jasmine.github.io/2.0/introduction.html
+[jsonview-chrome]: https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en
+[jsonview-firefox]: https://addons.mozilla.org/en-us/firefox/addon/jsonview/
 [karma]: https://karma-runner.github.io/1.0/index.html
 [labtasks]: LABTASKS.md
 [local]: http://localhost:4567/

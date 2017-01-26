@@ -32,7 +32,7 @@ public class Server {
         // List users
         get("/users", (req, res) -> {
             res.type("application/json");
-            return wrapInJson("users", gson.toJsonTree(userController.listUsers()));
+            return wrapInJson("users", gson.toJsonTree(userController.listUsers(req.queryMap().toMap())));
         });
 
         // See specific user
