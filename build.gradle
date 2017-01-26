@@ -1,0 +1,56 @@
+// Originally developed with gradle 3.3, included is a 3.3 gradlew
+
+// Gradle plugins
+plugins {
+    id 'com.craigburke.client-dependencies' version '1.3.1'
+    id 'com.craigburke.karma' version '1.4.4'
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+// The class where our server is located
+mainClassName='umm3601.Server'
+
+// Repositories to download stuff from
+repositories {
+    mavenCentral()
+}
+
+// External dependencies that our application utilizes
+dependencies {
+    compile 'com.sparkjava:spark-core:2.5.4'
+    compile 'org.slf4j:slf4j-simple:1.7.6'
+    compile 'com.google.code.gson:gson:2.8.0'
+
+    testCompile 'junit:junit:4.12'
+}
+
+// Karma configuration for the gradle-karma plugin
+karma {
+    basePath = '../'
+    colors = true
+    profile 'default'
+
+    browsers = ['PhantomJS']
+    frameworks = ['jasmine']
+    reporters = ['progress']
+
+    profile('default')  {
+        libraryBases = ['src/main/resources/public/vendor/']
+        libraryFiles = ['**/*.js']
+
+        sourceBases = ['src/main/resources/public/javascript/']
+        sourceFiles = ['*.js']
+
+        testBases = ['src/test/javascript/']
+        testFiles = ['*.spec.js']
+    }
+}
+
+task runWithTests {
+    group = "application"
+}
+
+runWithTests.dependsOn karmaRun
+runWithTests.dependsOn test

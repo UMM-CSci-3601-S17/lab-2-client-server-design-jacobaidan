@@ -1,3 +1,10 @@
-.idea/*
-node_modules/*
-coverage/*
+### Gradle ###
+.gradle
+build/
+!gradle-wrapper.jar
+
+### IntelliJ / Webstorm ###
+.idea/
+
+### Node (karma plugin utilizes it) ###
+node_modules/

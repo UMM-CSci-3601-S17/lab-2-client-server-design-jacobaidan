@@ -1,5 +1,5 @@
+// Just some example testing.
 
-//Just some example testing.
 describe('testing basic functions', function(){
     it('should return the correct string length', function(){
         expect(testStringLength("kittens")).toEqual(7);
