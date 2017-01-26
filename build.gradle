@@ -10,7 +10,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 // The class where our server is located
-mainClassName='Server'
+mainClassName='umm3601.Server'
 
 // Repositories to download stuff from
 repositories {
