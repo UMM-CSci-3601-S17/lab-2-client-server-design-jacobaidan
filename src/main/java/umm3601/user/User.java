@@ -3,7 +3,7 @@ package umm3601.user;
 public class User {
     String _id;
     String name;
-    Integer age;
+    int age;
     String company;
     String email;
 }
