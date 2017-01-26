@@ -26,9 +26,6 @@ public class Server {
         // Redirect for the "about" page
         redirect.get("/about", "/about.html");
 
-        // Redirect for the Pet Form
-        redirect.get("/petForm", "/petForm.html");
-
         // Redirect for the Users Form
         redirect.get("/users", "/users.html");
 
