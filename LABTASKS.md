@@ -7,6 +7,18 @@ Responses to questions should be submitted as specified by your instructor.
 
 If you're ever confused about what you need to do for a given task, ask.
 
+## Exploring the project
+
+Look over the directory structure of the project before you start
+making changes to it, and consider the various tools that we are
+using to manage our project.
+
+:question: What is the purpose of `.gitignore`?
+
+Make sure you understand what role Gradle is playing in the
+project, and what the purpose of `build.gradle` is. Also make
+sure you understand the purpose of Travis.
+
 ## Exploring the server
 
 Study the server (Java) code in project you have cloned.
@@ -154,7 +166,7 @@ collection of (randomly generated) user data, and making it
 available (with filtering) via the simple API you explored above.
 
 Your task here is to use test-driven development (TDD) to
-extend the server's API to support serving to-do data. There
+extend the server's API to support serving 'to-do' data. There
 is a file `data/todos` that has several hundred randomly
 generated "to-do"s, each of which has:
 * A unique `_id`
@@ -195,19 +207,3 @@ api/todos?owner=Blanche&status=complete&limit=12
 
 which would return the first 12 completed to-dos owned by
 Blanche.
-
-##### Find the client-side testing file, describe where it is located and what it is testing. Run karma (the client-side testing engine) as specified in the README and describe results. Do not edit any files at this time.
-
-##### Find the server-side testing file, describe where it is located and what it is testing. Run JUnit as specified in the README and describe results. Do not edit any files at this time.
-
-##### After having set up Travis CI with your forked project, play around with the page for your project (build history, settings, branches, etc) and describe at least 3 features you think would be useful when troubleshooting a broken project or failing build.
-
-##### What was the build status of your project right after you got everything set up? Use Travis to find any problems, and describe what failed, if anything. (Which files, what lines, why did failure occur, etc.)
-
-##### Fix any problems described in the previous question. Describe how you fixed them. Push your fix to GitHub and post a link to the passing build (from the build history) here.
-
-- Study jasmine testing syntax. Think of a JavaScript function, describe its behavior by writing tests for it (this is test-driven development, or TDD). Add the function, run the tests. (Actually do this. Don't forget to commit and push your changes!)
-
-## Part #3: Adding something other than a GPA calculator!
-
-> TODO: Write vague instructions for this!
