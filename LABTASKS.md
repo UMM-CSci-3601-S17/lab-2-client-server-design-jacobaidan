@@ -61,6 +61,92 @@ is it displayed?
 
 :question: What's in .gitgnore file? What's the purpose of it?
 
+## Use ZenHub to support Agile development
+
+We'll be using ZenHub to augment the standard GitHub issues
+system with nifty powers to aid in Agile estimating,
+planning, tracking, and development. The next two sections
+describe the software development tasks you need to complete
+for this lab, which fall into two main groups:
+* Augmenting the server API with new functionality
+* Augmenting the client to allow the user to access that new
+functionality.
+
+### Setting up the project ZenHub board
+
+So before you actually start _coding_ on any of that, you
+should spend some time using ZenHub to capture and estimate
+stories and do some planning.
+
+* Make sure you've turned on [ZenHub](http://zenhub.com) so it works :smile:
+* Create at least one Milestone that starts on the first day of lab and ends when the lab is due
+   * If you want to break the lab period into smaller time boxes and have multiple, smaller Milestones, that would be OK as well. If you do this, make sure you provide
+   reasonable start and end dates so one follows on from the
+   other, and the first starts at the beginning of the lab
+   and the last ends when the lab is due.
+* Create two Epics:
+   * One for augmenting the backend API
+   * One for adding client-side support for accessing those
+   new API features
+* Create a collection of stories/issues for the different
+development activities in the lab
+   * You'll want to go through the descriptions below of the
+     desired tasks, and turn those into individuals stories
+   * You should add an estimate to each story; we'll say more
+     about that below
+   * You should add each story to the appropriate Epic
+* Once you've created and estimated all the stories, you
+should think about which ones you think you can reasonably
+do in this lab. This could be all of them, but it doesn't
+have to be. You can always add stories to this Milestone as
+things progress, and in general customers would rather see
+the set of stories you expect to complete in this Milestone
+_increase_ rather than _decrease_, so being conservative in
+your initial planning is probably a Good Thing.
+   * You should add the stories that you _expect_ to do in the lab to your Milestone.
+   * You should move the stories you expect to do into the Backlog track, and move all the other stories into the Icebox track.
+
+### Using the board
+
+You'll then need to keep an eye on your board throughout the
+lab, using it to guide your decisions about what to work on,
+updating issues as you make progress, etc.
+
+Whenever you sit down to work on the project, you should be
+clearly working on a specific story. If you feel like there's
+something that _needs_ to be done but isn't in a card, you
+should make a story for that before you start working on it.
+
+When you start work on a new story, you should create a
+feature branch for that story, and commit your work on that
+story to that branch. Commit messages should refer to that
+story (by number, e.g., `Issue #8`) so GitHub can auto-link
+the commits to that issue for you.
+
+When you feel like a story is complete
+* Move that card to the Review/QA track
+* Issue a Pull Request (_we'll have to talk about this in lab_) from your feature branch onto your master branch
+
+Then step away from that story for a while,
+either by working on a different part of the lab, or by
+doing something unrelated to Software Design. Then come back
+back to that _as a team_ and review the requirements
+described in the story and compare them to the functionality
+you implemented. Is the story _done done_? Are there solid
+and complete tests that back up the work? Can you break it?
+Have you tried? Would you bet your career (or at least your
+next raise) on this working in a customer demo or out in the
+field?
+
+If you find issues, document them, either in the existing
+story, or through new stories. Then go back to working in
+the feature branch for that story, and repeat the whole
+process.
+
+Once the story passes review, you should
+* Merge the associated feature branch into master by accepting the (perhaps modified) pull request
+* Move the story to the Done or Closed track as you see fit
+
 ## Extending the server API
 
 The initial server (Java) code demonstrates reading in a
