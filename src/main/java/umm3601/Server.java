@@ -29,14 +29,17 @@ public class Server {
         // Redirect for the Pet Form
         redirect.get("/petForm", "/petForm.html");
 
+        // Redirect for the Users Form
+        redirect.get("/users", "/users.html");
+
         // List users
-        get("/users", (req, res) -> {
+        get("api/users", (req, res) -> {
             res.type("application/json");
             return wrapInJson("users", gson.toJsonTree(userController.listUsers(req.queryMap().toMap())));
         });
 
         // See specific user
-        get("/users/:id", (req, res) -> {
+        get("api/users/:id", (req, res) -> {
             res.type("application/json");
             String id = req.params("id");
             return gson.toJson(userController.getUser(id));
