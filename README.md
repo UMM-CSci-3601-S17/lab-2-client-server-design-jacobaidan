@@ -8,15 +8,61 @@ Your website will make use of JavaScript on the front-end to enable you to accep
 
 Your specific tasks for this lab can be found in the [LABTASKS.md][labtasks] file in this repository.
 
+## Overview of the project
+
+You'll be building parts of a simple to-do list using a
+client-server architecture. The server will be able to handle
+simple HTTP GET requests, where a client (or a user) can
+visit a URL such as `http://localhost:4567/users` and the server
+will respond with JSON-formatted text containing
+all the users the server knows about, e.g.,
+```
+[
+  {
+    "_id": "588935f57546a2daea44de7c",
+    "name": "Connie Stewart",
+    "age": 25,
+    "company": "OHMNET",
+    "email": "conniestewart@ohmnet.com"
+  },
+  {
+    "_id": "588935f5597715f06f3e8f6c",
+    "name": "Lynn Ferguson",
+    "age": 25,
+    "company": "NIQUENT",
+    "email": "lynnferguson@niquent.com"
+  },
+  ...
+]
+```
+
+The client will be a combination of HTML, CSS, and JavaScript
+that runs in the browser and converts user actions (such as
+clicking a button) into requests to the server. In a "real"
+system you'd want to display the results nicely as part of
+the application web interface (like a list of e-mails in GMail),
+for to keep this lab simple you'll just display the "raw" JSON
+that the client receives from the server.
+
+This lab has two components:
+
+* Implement the desired server functionality
+* Implement a simple web client that allows users to access that server functionality through HTML forms
+
+The details of both of these components are in [LABTASKS.md](./LABTASKS.md).
+
 ## Setup
 
-We will be using [IntelliJ][intellij] for the rest of the course. It's made by the same company that made WebStorm, but is meant for Java projects. It also includes basically everything WebStorm has, so any web development is possible in IntelliJ.
+We will be using [IntelliJ][intellij] for the rest of the course. It's made
+by the same company that made WebStorm, but provides powerful support for
+Java projects (not unlike Eclipse) as well as including basically everything
+WebStorm has, so web development is possible in IntelliJ.
 
 Open up IntelliJ and clone your fork of this repository from GitHub. When prompted if you would like create an IntelliJ project for the sources you've checked out, **select yes**.
 
 Then, select **import project from existing model** and select **Gradle**. Make sure **Use default graddle wrapper** is selected on the next screen, and click **Finish**.
 
-You'll also want a JSON view extension for either Firefox or Chrome installed. This will make JSON in the browser look pretty and actually be readable.
+You'll also want the JSONView extension for either Firefox or Chrome installed. This will make JSON in the browser look pretty and actually be readable.
 
 * Firefox: [JSONView][jsonview-firefox]
 * Chrome: [JSONView][jsonview-chrome]
@@ -24,7 +70,9 @@ You'll also want a JSON view extension for either Firefox or Chrome installed. T
 
 ## Running Your project
 
-We use the [Gradle][gradle] build tool to build and run our web application. Gradle is a powerful task running system that allows us to easily build and test our full web application.
+We use the [Gradle][gradle] build tool to build and run our web application.
+Gradle is a powerful system for defining, managing, and running tasks system
+that allows us to easily build and test our full web application.
 
 Open the Gradle tool window in IntelliJ by going to: `View -> Tool Windows -> Gradle`. From here, open up the `Tasks` section. Gradle tasks run things like the development server, production build, and tests. Open up the `application` task category and double click `run`.
 
@@ -44,7 +92,7 @@ To run your client-side tests, run the `karmaRun` task inside the `karma` task c
 
 The server-side portion of this project will be tested using JUnit.
 
-Server-sided tests are located in the `src/test/java` directory. Naming convention for this also follows a simple pattern. For a file such as `Server.java`, the test would be called `ServerSpec.java`.
+Server-sided tests are located in the `src/test/java` directory.
 
 To run your server-side tests, let's practice creating an IntelliJ run configuration. We need to do this because there is no default task for running only server-side tests. Open `Run -> Edit configurations`. Click the green `+` arrow and choose `Gradle`.
 
@@ -53,7 +101,16 @@ To run your server-side tests, let's practice creating an IntelliJ run configura
 - Tasks: test
 - Script parameters: `-x karmaRun`
 
-Then, you can run it by selecting the run configuration `Run -> Run... -> Run Server Tests`.
+Then, you can run it by selecting the run configuration
+`Run -> Run... -> Run Server Tests`. The `-x karmaRun` script
+parameters specify that you want to run all the tests
+_except_ the karma tests so you just get the server tests.
+
+(In IntelliJ you can also run all the JUnit tests in the project
+by right-clicking on `test/java` in the `Project` view and choose
+`Run All Tests...`. It's useful to know how to create a run
+configuration, though, and they can be important for automating
+processing like Travis-CI.)
 
 ### Both
 
@@ -62,7 +119,11 @@ To run both tests at the same time, run the `test` task inside of the `verificat
 ## Continuous Integration with Travis CI
 [Travis CI][travis] is a Continuous Integration tool that performs builds of your project every time you push to GitHub. This is very helpful, as it makes keeping track of your testing over the lifetime of a project very easy. Having a build/test history makes finding where, or when, your project broke less of a nightmare.
 
-With Travis any open-source, public project on GitHub can use Travis CI for free whereas people normally need to pay for the ability to use Travis to build private repositories. Through your GitHub Student pack, you get free private builds on Travis while you're a student.
+Any open-source, public project on GitHub can use Travis CI for
+free whereas people normally need to pay for the ability to use
+Travis to build private repositories. Through your GitHub
+Student pack, you get free private builds on Travis while you're
+a student.
 
 > Protip: The GitHub Student pack has a ton of really awesome stuff in it, including $100 of credit to Digital Ocean! https://education.github.com/pack/offers
 
@@ -79,9 +140,16 @@ What you need to do:
 - Find your fork for this lab in the list of repositories.
 - Enable continuous integration for it by clicking the big toggle switch beside it.
 - Then, click on the gear icon (settings) directly next to the previous toggle switch.
-- From here, you can see various pieces of information and settings regarding the builds of your project.
-- At this point, make some change to your forked project and add those changes to GitHub (It doesn't really matter what you do, this is needed to trigger a Travis build).
-- Click on the Build Status Image button to the right of the name of the repository.
+- From here, you can see various pieces of information and
+settings regarding the builds of your project. You don't need
+to change anything at the moment, but it's good to see what's
+there
+
+At this point, make some change to your forked project and add those changes to GitHub (It doesn't really matter what you do, this is needed to trigger a Travis build).
+
+After you committed and pushed those changes, click on
+the Build Status Image button to the right of the name of the
+repository.
   - Select "Master" for the Branch.
   - Select "Markdown" for the drop-down.
   - Copy the markdown it provides.
@@ -90,26 +158,25 @@ What you need to do:
 Your own forked project is now ready for the magic of continuous integration!
 
 ## Resources
+
 ##### Running in the command line
+
 We include a Gradle wrapper which lets you run gradle tasks from the command line. First, give executable permission:
 
-```
-chmod +x ./gradlew
-```
-
 Then, run tasks like:
-
 
 ```
 ./gradle test
 ```
 
 ##### Handling requests in Spark
+
 - [Using Spark to create APIs in Java][spark-api]
 - [Response handling with Spark][spark-response]
 - [Spark documentation][spark-documentation]
 
 ##### Tutorial for testing with Jasmine
+
 - [Introduction to Jasmine testing][jasmine-introduction]
 
 [gradle]: https://gradle.org/
