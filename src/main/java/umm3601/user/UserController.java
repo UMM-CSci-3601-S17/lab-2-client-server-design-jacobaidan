@@ -5,13 +5,11 @@ import com.google.gson.Gson;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public class UserController {
 
-    User[] users;
+    private User[] users;
 
     public UserController() throws IOException {
         Gson gson = new Gson();
