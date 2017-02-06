@@ -29,6 +29,9 @@ public class Server {
         // Redirect for the Users Form
         redirect.get("/users", "/users.html");
 
+        // Redirect for the Todos Form
+        redirect.get("/todo", "/todo.html");
+
         // List users
         get("api/users", (req, res) -> {
             res.type("application/json");
@@ -40,6 +43,19 @@ public class Server {
             res.type("application/json");
             String id = req.params("id");
             return gson.toJson(userController.getUser(id));
+        });
+
+        // List todos
+        get("api/todos", (req, res) -> {
+            res.type("application/json");
+            return wrapInJson("todos", gson.toJsonTree(todoController.listTodos(req.queryMap().toMap())));
+        });
+
+        // See specific to-do
+        get("api/todos/:id", (req, res) -> {
+            res.type("application/json");
+            String id = req.params("id");
+            return gson.toJson(todoController.getTodo(id));
         });
     }
 
