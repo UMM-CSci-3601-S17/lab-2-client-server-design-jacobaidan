@@ -16,42 +16,49 @@ window.onload = function() {
     element.addEventListener("click", getAllTodos, true);
 }
 
-var getAllTodos = function() {
-    var HttpClient = new HttpClient();
-    HttpClient.get("/api/todos", function(returned_json){
+/**
+ * Function to get all the ToDos!
+ */
+var getAllToDos = function() {
+    var HttpThingy = new HttpClient();
+    HttpThingy.get("/api/todos", function(returned_json){
         document.getElementById('jsonDump').innerHTML = returned_json;
     });
 }
 
-function Conglomerate(){        //Kangaroo
-    var id=document.getElementById('todoID').value;
+function JSInput(){
+
+    var id=document.getElementById('toDoID').value;
     var limit=document.getElementById('limit').value;
     var status=document.getElementById('status').value;
     var contains=document.getElementById('contains').value;
     var owner=document.getElementById('owner').value;
     var category=document.getElementById('category').value;
-    var orderBy=document.getElementById('orderBy').value;
-    var url = buildURL(id, limit, status, contains, owner, category, orderBy);
 
-    var HttpClient = new HttpClient();
+    var url = inputToURL(id, limit, status, contains, owner, category);
 
-    HttpClient.get(url, function(returned_json){
+    var HttpThingy = new HttpClient();
+
+    HttpThingy.get(url, function(returned_json){
         document.getElementById('jsonDump').innerHTML = returned_json;
     });
 }
 
-function buildURL(id, limit, status, contains, owner, category, orderBy) {
+function inputToURL(id, limit, status, contains, owner, category) {
+
     if (id) {
         return "/api/todos/"  + id;
     }
-    var url = "/api/todos?";
-    if (limit) url = url + "&limit=" + limit;
-    if (status) url = url + "&status=" + status;
-    if (contains) url = url + "&contains=" + contains;
-    if (owner) url = url + "&owner=" + owner;
-    if (category) url = url + "&category=" + category;
-    if (orderBy) url = url + "&orderBy=" + orderBy;
-    return url;
+
+    var toReturn = "/api/todos?";
+
+    if (limit) toReturn = toReturn + "&limit=" + limit;
+    if (status) toReturn = toReturn + "&status=" + status;
+    if (contains) toReturn = toReturn + "&contains=" + contains;
+    if (owner) toReturn = toReturn + "&owner=" + owner;
+    if (category) toReturn = toReturn + "&category=" + category;
+
+    return toReturn;
 }
 
 
